@@ -4,9 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World</title>
+  <?php
+    $id=$_GET['id'];
+    switch ($id) {
+      case 1:
+        $name='Spiderman';
+        break;
+      case 2:
+        $name='Ironman';
+        break;
+    }
+  ?>
+  <title><?= $name ?></title>
 </head>
 <body>
-  <?php echo '<h1>Hello World !</h1>'; ?>
+  <h1><?= $name ?></h1>
+  <?php echo $id ?>
 </body>
 </html>
